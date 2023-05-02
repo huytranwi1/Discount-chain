@@ -1,6 +1,3 @@
-// If a customer has a subscription, the customer will receive a 25% discount after the refill total has been calculated.
-// If the customer has a coupon, the customer will receive a $10 discount after the subscription discount has been calculated.
-// At the end of the script, you should return and log the string "Your grand total is ${finalAmount}." 
 
 const timmy = {
     prescription: "acetaminophen",
@@ -28,6 +25,10 @@ const rocky = {
 
 // create different function that take in an argument from the outside
 
+// we can change the timmy arguments and it will calculate the other people as well
+
+
+// we need the sum before any discount
 function customerName(price){
     console.log(price.pricePerRefill + price.refills)
 }
@@ -43,6 +44,8 @@ function customerSubdis(discount){
         console.log("no discount")
     }
 }
+
+// subscription discount if the person has subscription or not
  const subDiscount = customerSubdis(timmy);
 
 
@@ -55,7 +58,7 @@ function customerSubdis(discount){
     }
 
  }
-
+ // argument for if coupon true or false
  const couDiscount = customerDiscount(timmy);
 
 // At the end of the script, you should return and log the string "Your grand total is ${finalAmount}."
